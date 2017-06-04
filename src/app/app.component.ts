@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -10,13 +11,9 @@ export class AppComponent {
   title = 'app';
   keyword = '';
 
-  data: any;
 
-  constructor (private http: Http) {
-    this.http.get('/api/articles.json')
-      .subscribe(res => {
-        this.data = res.json();
-      });
+  constructor (public dataSvc: DataService) {
+    this.dataSvc.loadArticles();
   }
 
   keyKW($event: KeyboardEvent) {
