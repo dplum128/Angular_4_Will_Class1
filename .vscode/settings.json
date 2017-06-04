@@ -1,0 +1,13 @@
+// 將您的設定放入此檔案中以覆寫預設值和使用者設定。
+{
+  "typescript.check.tscVersion": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.js": {"when": "$(basename).ts"},
+    "typescript.tsdk": "%USERPROFILE%/AppData/Roaming/npm/node_modules/typescript/lib"
+  }
+}
