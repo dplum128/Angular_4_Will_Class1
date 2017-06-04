@@ -8,7 +8,7 @@ import { DataService } from './data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'App, Hi';
   keyword = '';
 
 

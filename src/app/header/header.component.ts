@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  @Input()
   sitename = 'D.Plum App';
+
+  @Output()
+  change = new EventEmitter<any>();
+
   logourl = 'assets/images/logo.png';
   subTitle = '記載著 Will 在網路世界的學習心得與技術分享';
   counter = 0;
 
   constructor() {
-    setTimeout(() => {
-      this.sitename = 'DPlum Web';
-    }, 3000);
+    // setTimeout(() => {
+    //   this.sitename = 'DPlum Web';
+    // }, 3000);
   }
 
   ngOnInit() {
@@ -23,6 +28,7 @@ export class HeaderComponent implements OnInit {
 
   changeTitle() {
     this.sitename = 'D.Plum Web';
+    this.change.emit(this.sitename);
   }
 
   addCounter() {
