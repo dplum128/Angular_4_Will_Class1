@@ -10,14 +10,14 @@
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
         <!-- Article START-->
-        <article class="post" id="post{{i}}" *ngFor="let item of articleData; let i = index">
+        <article class="post" id="post{{i}}" *ngFor="let item of data; let i = index">
           <header class="post-header">
             <h2 class="post-title">
               <a [href]="item.href">{{item.title}}</a>
             </h2>
             <div class="post-info clearfix">
               <span class="post-date"><i class="glyphicon glyphicon-calendar"></i>{{item.date | date:'yyyy-MM-dd'}}</span>
-              <span class="post-author"><i class="glyphicon glyphicon-user"></i>{{item.author}}</span>
+              <span class="post-author"><i class="glyphicon glyphicon-user"></i>{{item.author | mask: 3}}</span>
               <span class="post-category"><i class="glyphicon glyphicon-folder-close"></i><a [href]="item.category-link">{{item.category}}</a></span>
             </div>
           </header>
