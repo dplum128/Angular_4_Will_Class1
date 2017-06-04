@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  sitename = 'D.Plum App';
+  logourl = 'assets/images/logo.png';
+
+  constructor() {
+    setTimeout(() => {
+      this.sitename = 'DPlum Web';
+    }, 3000);
+   }
 
   ngOnInit() {
+  }
+
+  changeTitle () {
+    this.sitename = 'D.Plum Web';
   }
 
 }
