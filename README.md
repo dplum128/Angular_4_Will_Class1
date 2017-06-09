@@ -1,5 +1,7 @@
 # Demo1
 
+Angular_4_保哥_新手入門
+網頁實戰：新手入門篇 -- 上課練習範例
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
 
 ## Development server
